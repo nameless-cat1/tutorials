@@ -25,12 +25,15 @@ X,Y = np.meshgrid(x, y)
 
 # use plt.contourf to filling contours
 # X, Y and value for (X,Y) point
+# 上色,8与图的分层和线数有关
 plt.contourf(X, Y, f(X, Y), 8, alpha=.75, cmap=plt.cm.hot)
 
 # use plt.contour to add contour lines
+# 划线
 C = plt.contour(X, Y, f(X, Y), 8, colors='black', linewidth=.5)
 # adding label
 plt.clabel(C, inline=True, fontsize=10)
+# inline为线是否穿过数字
 
 plt.xticks(())
 plt.yticks(())
